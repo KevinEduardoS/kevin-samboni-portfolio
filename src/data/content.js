@@ -4,7 +4,7 @@ export const profileBase = {
   initials: "KS",
   email: "Kevinedu121996@hotmail.com",
   phone: "+57 318 269 5313",
-  linkedin: "https://www.linkedin.com/in/kevin-eduardo-samboni-gonzalez-5460a03a0/",
+  linkedin: "https://www.linkedin.com/in/kevin-samboni-gonzalez-53a0a03a0/",
   github: "https://github.com/Kevin16u",
   cvPath: "/cv/CV-Kevin-Samboni-2026.pdf",
 };
