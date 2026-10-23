@@ -3,7 +3,7 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { useContent } from "../hooks/useContent";
 
 export default function Projects() {
-  const { ui, projects, profile } = useContent();
+  const { ui, projects, profile, lang } = useContent();
 
   return (
     <section id="proyectos" className="py-24 max-w-6xl mx-auto px-6">
@@ -35,15 +35,6 @@ export default function Projects() {
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{p.title}</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">{p.org}</p>
               </div>
-              <a
-                href={p.link || profile.github}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`${p.title}`}
-                className="shrink-0 text-gray-400 hover:text-brand-500 transition-colors opacity-0 group-hover:opacity-100"
-              >
-                {p.link ? <FiExternalLink size={20} /> : <FiGithub size={20} />}
-              </a>
             </div>
 
             <div className="flex flex-wrap gap-2 mt-3">
@@ -58,6 +49,36 @@ export default function Projects() {
             </div>
 
             <p className="text-gray-600 dark:text-gray-300 mt-3 flex-1">{p.desc}</p>
+            <div className="mt-3 flex flex-wrap gap-3">
+              {p.link && (
+                <motion.a
+                  href={p.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ duration: 0.2 }}
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand-500 hover:text-brand-600 transition-colors"
+                >
+                  <FiExternalLink size={16} />
+                  {lang === "es" ? "Ver proyecto web" : "View project website"}
+                </motion.a>
+              )}
+              {p.githubLink && (
+                <motion.a
+                  href={p.githubLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ duration: 0.2 }}
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-brand-500 transition-colors"
+                >
+                  <FiGithub size={16} />
+                  {lang === "es" ? "Ver en GitHub" : "View on GitHub"}
+                </motion.a>
+              )}
+            </div>
             <p className="text-brand-500 font-semibold mt-3 text-sm">{p.impact}</p>
           </motion.div>
         ))}
