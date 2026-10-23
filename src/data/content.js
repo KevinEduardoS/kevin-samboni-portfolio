@@ -158,6 +158,15 @@ const content = {
     ],
     projects: [
       {
+        title: "TestPilot",
+        org: "Pruebas end-to-end con IA",
+        tech: ["React", "TypeScript", "Node.js", "Fastify", "Playwright", "Claude API", "Docker", "QA"],
+        impact: "Distingue si un fallo es de la prueba o un bug real del sitio, corrige selectores sin debilitar las aserciones y redacta reportes de bug listos para compartir.",
+        desc: "TestPilot convierte instrucciones en lenguaje natural en pruebas Playwright, las ejecuta en un navegador real mostrando cada paso en vivo y, cuando fallan, usa IA para diagnosticar la causa. Cada script generado pasa por una política de seguridad que analiza su código antes de ejecutarse, y el navegador solo puede visitar dominios permitidos. Incluye 187 pruebas automatizadas.",
+        link: null,
+        githubLink: "https://github.com/KevinEduardoS/Testpilot",
+      },
+      {
         title: "Storylint",
         org: "Linter de historias de usuario",
         tech: ["Next.js 14 · TypeScript · Tailwind CSS"],
@@ -332,6 +341,15 @@ const content = {
       },
     ],
     projects: [
+      {
+        title: "TestPilot",
+        org: "AI-powered end-to-end testing",
+        tech: ["React", "TypeScript", "Node.js", "Fastify", "Playwright", "Claude API", "Docker", "QA"],
+        impact: "Tells apart a broken test from a real bug in the site, fixes selectors without weakening assertions, and writes bug reports ready to share.",
+        desc: "TestPilot turns natural-language instructions into Playwright tests, runs them in a real browser showing each step live and, when they fail, uses AI to diagnose the cause. Every generated script goes through a security policy that analyzes its code before running, and the browser can only visit allowed domains. It includes 187 automated tests.",
+        link: null,
+        githubLink: "https://github.com/KevinEduardoS/Testpilot",
+      },
       {
         title: "Storylint",
         org: "User story linter",
